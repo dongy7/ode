@@ -203,6 +203,40 @@
 					</p>
 					<p class="fragment">$$e_{n+1} = h \sum_{i=1}^{k} \delta_i s_i$$</p>
 				</section>
+				<section>
+					<h3>Stiffness</h3>
+					<blockquote>
+						&ldquo;
+						A problem is stiff if the solution being sought varies slowly, but there are
+						nearby solutions that vary rapidly, so the numerical method must take
+						small steps to obtain satisfactory results.
+						&rdquo;
+					</blockquote>
+				</section>
+				<section>
+					<h3>Stiffness Example: Model of Flame Propagation</h3>
+					<p class="fragment">
+						When you light a match, the ball of flame grows until it reqches a critical size and remains there.
+					</p>
+					<p class="fragment">
+						$$\dot{y} = y^2 - y ^ 3, $$
+						$$ y(0) = \delta, $$
+						$$ 0 \ge t \le 2/\delta. $$
+					</p>
+					<p class="fragment">
+						$y(t)$ represents the radius of the ball and $\delta$ is the initial radius.
+					</p>
+				</section>
+				<section>
+					<h3>Non-stiff Solver</h3>
+					<img src="img/ode45.png" alt="Stiff behavior of ode45" height="400px">
+					<p>$\delta = 0.01$ vs $\delta = 0.00001$</p>
+				</section>
+				<section>
+					<h3>Stiff Solver</h3>
+					<img src="img/ode23s.png" alt="Stiff behavior of ode23s" height="400px">
+					<p>$\delta = 0.01$ vs $\delta = 0.00001$</p>
+				</section>
 			</div>
 		</div>
 
