@@ -65,6 +65,44 @@
 					<p>$$\dot{y} = \frac{dy(t)}{dt}$$</p>
 					<p>$$\ddot{y} = \frac{d^2y(t)}{dt^2}$$</p>
 				</section>
+				<section>
+					<h3>System of Equations</h3>
+					<p class="fragment">
+						Many mathematical models involve more than one unknown function, and second-and
+						higher order derivatives. These models can be handled by making $y(t)$ a vector valued
+						function of $t$.
+					</p>
+				</section>
+				<section>
+					<p class="fragment">
+						The second-order differential equation describing a simple harmonic oscillator:
+					</p>
+					<p class="fragment">
+						$$\ddot{x}(t) = -x(t)$$
+					</p>
+					<p class="fragment">
+						Becomes a two first-order equation:
+						$$y(t) = 
+						\begin{bmatrix}
+						x(t)\\
+						\dot{x}(t)
+						\end{bmatrix}
+						$$
+					</p>
+					<p class="fragment">
+						Using this vector the differential equation is:
+						$$\dot{y}(t) = 
+						\begin{bmatrix}
+						\dot{x}(t)\\
+						-x(t)
+						\end{bmatrix} =
+						\begin{bmatrix}
+						y_2(t)\\
+						-y_1(t)
+						\end{bmatrix}
+						$$
+					</p>
+				</section>
 			</div>
 		</div>
 
