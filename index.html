@@ -30,30 +30,30 @@
 				</section>
 				<section>
 					<h3>Integrating Differential Equations</h3>
-					<p>
+					<p class="fragment">
 						The initial value problem for an ordinary differential equation involves finding a
 						function y(t) that satisfies
 					</p>
-					<p>$$\frac{dy(t)}{dt} = f(t, y(t))$$</p>
-					<p>together with the initial condition</p>
-					<p>$$y(t_0) = y_0$$<p>
+					<p class="fragment">$$\frac{dy(t)}{dt} = f(t, y(t))$$</p>
+					<p class="fragment">together with the initial condition</p>
+					<p class="fragment">$$y(t_0) = y_0$$<p>
 				</section>
 				<section>
-					<p>
+					<p class="fragment">
 						The numerical solution generates a sequence of values for $t_o, t_1, ...$
 						and a corresponding sequence of values for the dependent variable,
 						$y_0, y_1, ...$ such that each $y_n$ approximates the solution at $t_n$.
 					<p>
-				  <p>
+				  <p class="fragment">
 						$$y_n \approx y(t_n), n = 0, 1, ...$$
 				  </p>
 				</section>
 				<section>
-					<p>Modern numerical methods determine step sizes automatically to control error by specificed tolerance:</p>
-					<p>$$h_n = t_{n+1} - t_n$$</p>
-					<p>Fundamental Theorem of Calculus gives us:</p>
-					<p>$$y(t+h) = y(t) + \int_t^{t+h} f(s, y(s)) ds$$</p>
-					<p>
+					<p class="fragment">Modern numerical methods determine step sizes automatically to control error by specificed tolerance:</p>
+					<p class="fragment">$$h_n = t_{n+1} - t_n$$</p>
+					<p class="fragment">Fundamental Theorem of Calculus gives us:</p>
+					<p class="fragment">$$y(t+h) = y(t) + \int_t^{t+h} f(s, y(s)) ds$$</p>
+					<p class="fragment">
 						Cannot use numerical quadrature directly to approximate integral because
 						y(s) is unknown. Basic idea is to choose a sequence of $h$ so that the
 						formula allows us to generate our numerical solution.
