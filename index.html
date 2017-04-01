@@ -221,7 +221,7 @@
 					<p class="fragment">
 						$$\dot{y} = y^2 - y ^ 3, $$
 						$$ y(0) = \delta, $$
-						$$ 0 \ge t \le 2/\delta. $$
+						$$ 0 \le t \le 2/\delta. $$
 					</p>
 					<p class="fragment">
 						$y(t)$ represents the radius of the ball and $\delta$ is the initial radius.
@@ -236,6 +236,48 @@
 					<h3>Stiff Solver</h3>
 					<img src="img/ode23s.png" alt="Stiff behavior of ode23s" height="400px">
 					<p>$\delta = 0.01$ vs $\delta = 0.00001$</p>
+				</section>
+				<section>
+					<h3>Errors</h3>
+					<p class="fragment">Errors enter the numerical solution of the initial value problem from two sources:</p>
+					<ol>
+						<li class="fragment">
+							<b>Discretization error</b>: property of the differential equation and the numerical method
+						</li>
+						<li class="fragment">
+							<b>Roundoff error</b>: property of the computer hardware and the program
+						</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Discretization Errors</h3>
+					<p class="fragment">
+						<b>Local discretization error</b>:
+						the error that would be made in one step if the previous
+						values were exact and if there were no roundoff error.
+					</p>
+					<p class="fragment">
+						<b>Global discretization error</b>:
+						the difference between the computed solution,
+						ignoring roundoff, and the true solution determined by the original initial condition
+						at $t_0$,
+					</p>
+					<p class="fragment">MATLAB solvers only attempt to control the local discretization error.</p>
+				</section>
+				<section>
+					<h3>Order</h3>
+					<p class="fragment">A fundamental concept in assessing the accuracy of a numerical method is its <i>order</i>.</p>
+					<p class="fragment">
+						Defined in terms of the local discretization error obtained if the
+						method is applied to problems with smooth solutions.
+					</p>
+					<p class="fragment">
+						A method is said to be of order $p$ if there is a number $C$ so that
+						$$|d_n| \le Ch_n^{p+1}.$$
+					</p>
+					<p class="fragment">
+						where $d_n$ is the local discretization error.
+					</p>
 				</section>
 			</div>
 		</div>
