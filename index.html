@@ -143,6 +143,66 @@
 						<p class="fragment">$$x_k(t) = e^{\lambda_k (t - t_c)}x(t_c)$$</p>
 					</ul>
 				</section>
+				<section>
+					<h3>Euler's Method</h3>
+					<p class="fragment">
+						The simplest numerical method for solving initial value is Euler's Method.
+						It uses a fixed step size $h$ and generates the approximate solution by
+					</p>
+					<p class="fragment">
+						$$y_{n+1} = y_{n} + hf(t_n, y_n)$$
+						$$t_{n+1} = t_n + h$$
+					</p>
+					<p class="fragment">
+						Does not provide an error estimate, so no way to determine what step size needed to achieve a specified accuracy
+					</p>
+				</section>
+				<section>
+					<h3>Single Step Methods</h3>
+					<p class="fragment">
+						The function $f(t, y)$ is evaluated several times for values of $t$ between $t_n$ and $t_{n+1}$.
+						and values of $y$ obtained by adding linear combinations of the values of $f$ to $y_n$.
+					</p>
+					<p class="fragment">
+						Actual step taken using another linear combination of the function values.
+					</p>
+					<p class="fragment">
+						Called <i>Runge-Kutta</i> methods after the two German applied mathematicians who
+						first wrote about them around 1905.
+					</p>
+				</section>
+				<section>
+					<h3>Classical Runge-Kutta</h3>
+					<p class="fragment">Uses four function evaluations per step:</p>
+					<p class="fragment">
+						$$s_1 = f(t_n, y_n),$$
+						$$s_2 = f\left(t_n + \frac{h}{2}, y_n + \frac{h}{2}s_1\right),$$
+						$$s_3 = f\left(t_n + \frac{h}{2}, y_n + \frac{h}{2}s_2\right),$$
+						$$s_4 = f\left(t_n + h, y_n + hs_3 \right),$$
+						$$y_{n+1} = y_n + \frac{h}{6}(s_1 + 2s_2 + 2s_3 + s_4)$$
+						$$t_{n+1} = t_{n} + h$$
+					</p>
+					<p class="fragment">No error estimate provided.</p>
+				</section>
+				<section>
+					<h3>General Single-Step Method</h3>
+					<p class="fragment">Characterized by a number of parameters</p>
+					<p class="fragment">$$\alpha_i, \beta_{i,j}, \gamma_i, \delta_i$$</p>
+					<p class="fragment">
+						$k$ stages, each stage computes a slope, $s_i$ by evaluating $f(t,y)$ for a
+						particular value of $t$ and a value of $y$ obtained by taking a linear combinations
+						of the previous slopes:
+					</p>
+					<p class="fragment">$$s_i = f \left(t_n + \alpha_i, y_n + h \sum_{j=1}^{i-1} \beta_{i,j} s_j \right), i = 1,..., k. $$</p>
+				</section>
+				<section>
+					<p class="fragment">The proposed step is also a linear combination of the slopes</p>
+					<p class="fragment">$$y_{n+1} = y_{n} + h \sum_{i=1}^{k} \gamma_i s_i$$</p>
+					<p class="fragment">
+						The estimate of the error that would occur with the step is provided another linear combination of the slopes:
+					</p>
+					<p class="fragment">$$e_{n+1} = h \sum_{i=1}^{k} \delta_i s_i$$</p>
+				</section>
 			</div>
 		</div>
 
