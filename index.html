@@ -115,32 +115,32 @@
 				</section>
 				<section>
 					<ul>
-					<li class="fragment">The most important term in this series is usually the one involving $J$, the Jacobian.</li>
-					<li class="fragment">
-						The influence of the Jacobian on the local behavior is determined by the
-						solution to the linear system of ordinary differential equations
-					</li>
-					<p class="fragment">$$\dot{y} = Jy$$</p>
-					<p class="fragment">
-						Let $\lambda_{k} = \mu_{k} + iv_{k}$ be the eigenvalues of $J$ and $\Lambda = diag(\lambda_{k})$
-						be the diagonal eigenvalue matrix. If there is a linearly independent set of corresponding eignenvectors
-						$V$
-					</p>
+						<li class="fragment">The most important term in this series is usually the one involving $J$, the Jacobian.</li>
+						<li class="fragment">
+							The influence of the Jacobian on the local behavior is determined by the
+							solution to the linear system of ordinary differential equations
+						</li>
+						<p class="fragment">$$\dot{y} = Jy$$</p>
+						<p class="fragment">
+							Let $\lambda_{k} = \mu_{k} + iv_{k}$ be the eigenvalues of $J$ and $\Lambda = diag(\lambda_{k})$
+							be the diagonal eigenvalue matrix.
+						</p>
 					</ul>
 				</section>
 				<section>
 					<ul>
-						<li class="fragment">Then,</li>
+						<li class="fragment">
+							If there is a linearly independent set of corresponding eignenvectors $V$, then: 
+						</li>
 						<p class="fragment">$$J = V\Lambda V^{-1}$$</p>
 						<li class="fragment">The linear transformation</li>
 						<p class="fragment">$$Vx = y$$</p>
 						<li class="fragment">
 							Transforms the local system of equations into a set of decoupled equations for the
-							individual components of $x$
+							individual components of $x$:
 						</li>
 						<p class="fragment">$$\dot{x_k} = \lambda_{k} x_{k}$$</p>
-						<li class="fragment">The solutions are:</li>
-						<p class="fragment">$$x_k(t) = e^{\lambda_k (t - t_c)}x(t_c)$$</p>
+						<li class="fragment">The solutions are: $x_k(t) = e^{\lambda_k (t - t_c)}x(t_c)$</li>
 					</ul>
 				</section>
 				<section>
@@ -193,7 +193,7 @@
 						particular value of $t$ and a value of $y$ obtained by taking a linear combinations
 						of the previous slopes:
 					</p>
-					<p class="fragment">$$s_i = f \left(t_n + \alpha_i, y_n + h \sum_{j=1}^{i-1} \beta_{i,j} s_j \right), i = 1,..., k. $$</p>
+					<p class="fragment">$$s_i = f \left(t_n + \alpha_i h, y_n + h \sum_{j=1}^{i-1} \beta_{i,j} s_j \right), i = 1,..., k. $$</p>
 				</section>
 				<section>
 					<p class="fragment">The proposed step is also a linear combination of the slopes</p>
