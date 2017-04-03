@@ -32,7 +32,7 @@
 					<h3>Integrating Differential Equations</h3>
 					<p class="fragment">
 						The initial value problem for an ordinary differential equation involves finding a
-						function y(t) that satisfies
+						function $y(t)$ that satisfies
 					</p>
 					<p class="fragment">$$\frac{dy(t)}{dt} = f(t, y(t))$$</p>
 					<p class="fragment">together with the initial condition</p>
@@ -112,6 +112,44 @@
 					<p class="fragment">$$f(t, y) = f(t_c, y_c) + α(t − t_c) + J(y − y_c) + ··· ,$$<p>
 					<p class="fragment">where<p>
 					<p class="fragment">$$α = \frac{\partial f}{\partial t}(t_c, y_c), J = \frac{\partial f}{\partial y}(t_c, y_c) $$<p>
+				</section>
+				<section>
+					<p class="fragment">For a system of differential equations with $n$ components,</p>
+					<p class="fragment">
+						<small>
+						$$
+						\frac{d}{dt}
+						\begin{bmatrix}
+						y_1(t) \\
+						y_2(t) \\
+						\vdots \\
+						y_n(t) \\
+						\end{bmatrix}
+						=
+						\begin{bmatrix}
+						f_1(t, y_1, ..., y_n) \\
+						f_2(t, y_1, ..., y_n) \\
+						\vdots \\
+						f_n(t, y_1, ..., y_n) \\
+						\end{bmatrix},
+						$$
+						</small>
+					</p>
+					<p class="fragment">the Jacobian is an $n$-by-$n$ matrix of partial derivatives:</p>
+					<p class="fragment">
+            <small>
+						$$
+						J
+						=
+						\begin{bmatrix}
+						\frac{\partial f_1}{\partial y_1} & \frac{\partial f_1}{\partial y_2} & \cdots & \frac{\partial f_1}{\partial y_n} \\
+						\frac{\partial f_2}{\partial y_1} & \frac{\partial f_2}{\partial y_2} & \cdots & \frac{\partial f_2}{\partial y_n} \\
+						\vdots & \vdots & \ddots & \vdots \\
+						\frac{\partial f_n}{\partial y_1} & \frac{\partial f_n}{\partial y_2} & \cdots & \frac{\partial f_n}{\partial y_n} \\
+						\end{bmatrix},
+						$$
+            </small>
+					</p>
 				</section>
 				<section>
 					<ul>
