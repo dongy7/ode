@@ -275,12 +275,21 @@
 						Defined in terms of the local discretization error obtained if the
 						method is applied to problems with smooth solutions.
 					</p>
+				</section>
+				<section>
 					<p class="fragment">
 						A method is said to be of order $p$ if there is a number $C$ so that
-						$$|d_n| \le Ch_n^{p+1}.$$
+						$$|d_n| \le Ch_n^{p+1} = O(h_n^{p+1}).$$
 					</p>
 					<p class="fragment">
 						where $d_n$ is the local discretization error.
+					</p>
+					<p class="fragment">
+						$C$ might depend on the partial derivatives of the function defining the
+						differential equation and on the length of the interval over which the solution is sought.
+					</p>
+					<p class="fragment">
+						But $C$ should be independent of the step number $n$ and the step size $h_n$.
 					</p>
 				</section>
 			</div>
